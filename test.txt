@@ -2,3 +2,4 @@ this is a test file
 test2
 password for sql server is 'thisisafakepassword'
 ding
+ping
