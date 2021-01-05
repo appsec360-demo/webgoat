@@ -3,4 +3,4 @@ test2
 password for sql server is 'thisisafakepassword'
 ding
 ping
-pinging
+
