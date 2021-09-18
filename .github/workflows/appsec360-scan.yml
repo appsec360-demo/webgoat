@@ -25,3 +25,10 @@ jobs:
         WORKSPACE: ""
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SCAN_AUTO_BUILD: true
+        
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: my_file.txt
+        
