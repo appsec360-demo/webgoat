@@ -1,6 +1,3 @@
-# This workflow integrates Scan with GitHub's code scanning feature
-# Scan is a free open-source security tool for modern DevOps teams from ShiftLeft
-# Visit https://slscan.io/en/latest/integrations/code-scan for help
 name: Appsec360
 
 on:
@@ -21,14 +18,9 @@ jobs:
     
     - name: Credscan
       uses: zricethezav/gitleaks-action@master
-      env:
-        WORKSPACE: ""
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SCAN_AUTO_BUILD: true
-        
+
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
       with:
-        name: my-artifact
         path: my_file.txt
         
