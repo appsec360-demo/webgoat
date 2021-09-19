@@ -16,12 +16,14 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Get credscan output
-      run: echo "Credscan output is ${{ steps.credscan.outputs.result }}"
- 
+    
     - name: Credscan
       id: credscan
       uses: zricethezav/gitleaks-action@master
+      
+    - name: Get credscan output
+      run: echo "Credscan output is ${{ steps.credscan.outputs.result }}"
+ 
       
    
     - name: 'Upload Artifact'
