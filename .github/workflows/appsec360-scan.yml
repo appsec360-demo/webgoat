@@ -19,10 +19,10 @@ jobs:
     - name: Credscan
       uses: zricethezav/gitleaks-action@master
       with:
-          args: '--report=./my_file1.json'
+          args: --report=./my_file1.json
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
       with:
-        path: my_file2.txt
+        path: ./my_file1.json
         
