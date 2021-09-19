@@ -17,11 +17,11 @@ jobs:
     - uses: actions/checkout@v1
     
     - name: Credscan
+      id: credscan
       uses: zricethezav/gitleaks-action@master
-      env:
-          CAPTURE_OUTPUT: ./my_output.json
-          GITLEAKS_RESULT: ./my_result.json
-          
+      
+    - name: Get credscan output
+      run: echo "Credscan output is ${{ steps.credscan.outputs.result }}"
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
